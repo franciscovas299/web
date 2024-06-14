@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de JavaScript Intermedio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Curso de JavaScript Intermedio</h1>
+  </header>
+  <main>
+    <section id="seccion1">
+      <h2>Sección 1: Funciones Avanzadas</h2>
+      <p>En esta sección, aprenderás sobre las funciones avanzadas en JavaScript, como las funciones de flecha y las funciones de orden superior.</p>
+      <h3>Ejemplo de funciones de flecha:</h3>
+      <pre><code>const suma = (a, b) => a + b;
+console.log(suma(2, 3)); // 5</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion1">
+        <div class="question">
+          <p>1. ¿Cómo se define una función de flecha en JavaScript?</p>
+          <label><input type="radio" name="q1" value="a"> function() {}</label><br>
+          <label><input type="radio" name="q1" value="b"> () => {}</label><br>
+          <label><input type="radio" name="q1" value="c"> function => {}</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué retorna la siguiente función de flecha: <code>const cuadrado = n => n * n;</code> cuando se llama con <code>cuadrado(4)</code>?</p>
+          <label><input type="radio" name="q2" value="a"> 4</label><br>
+          <label><input type="radio" name="q2" value="b"> 8</label><br>
+          <label><input type="radio" name="q2" value="c"> 16</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(1)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion1"></div>
+    </section>
+    <section id="seccion2" style="display:none;">
+      <h2>Sección 2: Promesas y Async/Await</h2>
+      <p>En esta sección, aprenderás sobre las promesas y la sintaxis de async/await para manejar operaciones asíncronas en JavaScript.</p>
+      <h3>Ejemplo de Promesas:</h3>
+      <pre><code>const promesa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('¡Éxito!');
+  }, 1000);
+});
+
+promesa.then(mensaje => {
+  console.log(mensaje);
+});</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion2">
+        <div class="question">
+          <p>1. ¿Qué hace el método <code>.then()</code> en una promesa?</p>
+          <label><input type="radio" name="q1" value="a"> Crea una nueva promesa</label><br>
+          <label><input type="radio" name="q1" value="b"> Maneja la resolución de una promesa</label><br>
+          <label><input type="radio" name="q1" value="c"> Rechaza una promesa</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué palabra clave se usa para esperar la resolución de una promesa dentro de una función asíncrona?</p>
+          <label><input type="radio" name="q2" value="a"> wait</label><br>
+          <label><input type="radio" name="q2" value="b"> async</label><br>
+          <label><input type="radio" name="q2" value="c"> await</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(2)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion2"></div>
+    </section>
+    <section id="seccion3" style="display:none;">
+      <h2>Sección 3: Manipulación del DOM</h2>
+      <p>En esta sección, aprenderás cómo manipular el DOM (Document Object Model) utilizando JavaScript.</p>
+      <h3>Ejemplo de manipulación del DOM:</h3>
+      <pre><code>document.getElementById('miElemento').textContent = '¡Hola, Mundo!';</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion3">
+        <div class="question">
+          <p>1. ¿Qué método se usa para seleccionar un elemento por su ID?</p>
+          <label><input type="radio" name="q1" value="a"> getElementById</label><br>
+          <label><input type="radio" name="q1" value="b"> querySelector</label><br>
+          <label><input type="radio" name="q1" value="c"> getElementsByClassName</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cómo se cambia el contenido de texto de un elemento en el DOM?</p>
+          <label><input type="radio" name="q2" value="a"> innerHTML</label><br>
+          <label><input type="radio" name="q2" value="b"> textContent</label><br>
+          <label><input type="radio" name="q2" value="c"> innerText</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(3)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion3"></div>
+    </section>
+    <section id="seccion4" style="display:none;">
+      <h2>Sección 4: Eventos</h2>
+      <p>En esta sección, aprenderás sobre el manejo de eventos en JavaScript, como los eventos de clic y los eventos de teclado.</p>
+      <h3>Ejemplo de eventos de clic:</h3>
+      <pre><code>document.getElementById('miBoton').addEventListener('click', () => {
+  alert('¡Botón clicado!');
+});</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion4">
+        <div class="question">
+          <p>1. ¿Qué método se usa para agregar un controlador de eventos a un elemento?</p>
+          <label><input type="radio" name="q1" value="a"> addEventListener</label><br>
+          <label><input type="radio" name="q1" value="b"> attachEvent</label><br>
+          <label><input type="radio" name="q1" value="c"> onEvent</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cuál es el evento correcto para detectar cuando un usuario presiona una tecla?</p>
+          <label><input type="radio" name="q2" value="a"> keydown</label><br>
+          <label><input type="radio" name="q2" value="b"> keypress</label><br>
+          <label><input type="radio" name="q2" value="c"> keyup</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(4)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion4"></div>
+    </section>
+    <section id="seccion5" style="display:none;">
+      <h2>Sección 5: Clases y Módulos</h2>
+      <p>En esta sección, aprenderás sobre las clases y los módulos en JavaScript.</p>
+      <h3>Ejemplo de clase:</h3>
+      <pre><code>class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  saludar() {
+    console.log(`Hola, mi nombre es ${this.nombre}`);
+  }
+}
+
+const juan = new Persona('Juan', 30);
+juan.saludar(); // Hola, mi nombre es Juan</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion5">
+        <div class="question">
+          <p>1. ¿Cómo se define una clase en JavaScript?</p>
+          <label><input type="radio" name="q1" value="a"> class MiClase {}</label><br>
+          <label><input type="radio" name="q1" value="b"> function MiClase {}</label><br>
+          <label><input type="radio" name="q1" value="c"> MiClase = class {}</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué palabra clave se usa para exportar un módulo en JavaScript?</p>
+          <label><input type="radio" name="q2" value="a"> module</label><br>
+          <label><input type="radio" name="q2" value="b"> export</label><br>
+          <label><input type="radio" name="q2" value="c"> export default</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(5)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion5"></div>
+    </section>
+    <section id="final" style="display:none;">
+      <h2>¡Felicitaciones!</h2>
+      <p>Has completado todas las secciones del curso de JavaScript Intermedio.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

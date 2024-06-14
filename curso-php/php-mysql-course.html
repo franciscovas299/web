@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos de PHP y MySQL</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Fundamentos de PHP y MySQL</h1>
+  </header>
+  <main>
+    <section id="seccion1">
+      <h2>Sección 1: Introducción a PHP</h2>
+      <p>PHP es un lenguaje de scripting del lado del servidor diseñado para el desarrollo web.</p>
+      <h3>Ejemplo de PHP:</h3>
+      <pre><code>&lt;?php
+echo "Hola, Mundo!";
+?&gt;</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion1">
+        <div class="question">
+          <p>1. ¿Qué es PHP?</p>
+          <label><input type="radio" name="q1" value="a"> Un lenguaje de scripting del lado del servidor</label><br>
+          <label><input type="radio" name="q1" value="b"> Un sistema operativo</label><br>
+          <label><input type="radio" name="q1" value="c"> Un navegador web</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cómo se imprime un mensaje en PHP?</p>
+          <label><input type="radio" name="q2" value="a"> echo "Hola, Mundo!";</label><br>
+          <label><input type="radio" name="q2" value="b"> print("Hola, Mundo!");</label><br>
+          <label><input type="radio" name="q2" value="c"> printf("Hola, Mundo!");</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(1)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion1"></div>
+    </section>
+    <section id="seccion2" style="display:none;">
+      <h2>Sección 2: Introducción a MySQL</h2>
+      <p>MySQL es un sistema de gestión de bases de datos relacional basado en SQL.</p>
+      <h3>Ejemplo de SQL:</h3>
+      <pre><code>SELECT * FROM usuarios;</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion2">
+        <div class="question">
+          <p>1. ¿Qué es MySQL?</p>
+          <label><input type="radio" name="q1" value="a"> Un sistema de gestión de bases de datos</label><br>
+          <label><input type="radio" name="q1" value="b"> Un lenguaje de programación</label><br>
+          <label><input type="radio" name="q1" value="c"> Un servidor web</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cómo seleccionas todos los registros de una tabla llamada "usuarios"?</p>
+          <label><input type="radio" name="q2" value="a"> SELECT * FROM usuarios;</label><br>
+          <label><input type="radio" name="q2" value="b"> SELECT usuarios FROM *;</label><br>
+          <label><input type="radio" name="q2" value="c"> GET ALL FROM usuarios;</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(2)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion2"></div>
+    </section>
+    <section id="seccion3" style="display:none;">
+      <h2>Sección 3: Conexión a MySQL con PHP</h2>
+      <p>Aprende a conectar PHP con una base de datos MySQL para realizar operaciones CRUD.</p>
+      <h3>Ejemplo de Conexión:</h3>
+      <pre><code>&lt;?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "miDB";
+
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+echo "Conexión exitosa";
+?&gt;</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion3">
+        <div class="question">
+          <p>1. ¿Cómo se crea una conexión a una base de datos MySQL en PHP?</p>
+          <label><input type="radio" name="q1" value="a"> $conn = new mysqli($servername, $username, $password, $dbname);</label><br>
+          <label><input type="radio" name="q1" value="b"> $conn = new mysqlconnect($servername, $username, $password, $dbname);</label><br>
+          <label><input type="radio" name="q1" value="c"> $conn = new connect_mysql($servername, $username, $password, $dbname);</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué función se usa para verificar la conexión?</p>
+          <label><input type="radio" name="q2" value="a"> if ($conn->error)</label><br>
+          <label><input type="radio" name="q2" value="b"> if ($conn->connect_error)</label><br>
+          <label><input type="radio" name="q2" value="c"> if ($conn->fail)</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(3)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion3"></div>
+    </section>
+    <section id="seccion4" style="display:none;">
+      <h2>Sección 4: Operaciones CRUD</h2>
+      <p>Las operaciones CRUD permiten crear, leer, actualizar y eliminar registros en una base de datos.</p>
+      <h3>Ejemplo de Inserción:</h3>
+      <pre><code>&lt;?php
+$sql = "INSERT INTO usuarios (nombre, email) VALUES ('Juan', 'juan@example.com')";
+if ($conn->query($sql) === TRUE) {
+    echo "Nuevo registro creado exitosamente";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+?&gt;</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion4">
+        <div class="question">
+          <p>1. ¿Qué significa CRUD?</p>
+          <label><input type="radio" name="q1" value="a"> Create, Read, Update, Delete</label><br>
+          <label><input type="radio" name="q1" value="b"> Create, Remove, Update, Delete</label><br>
+          <label><input type="radio" name="q1" value="c"> Create, Read, Upload, Delete</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cómo insertas un nuevo registro en la tabla "usuarios"?</p>
+          <label><input type="radio" name="q2" value="a"> INSERT INTO usuarios (nombre, email) VALUES ('Juan', 'juan@example.com');</label><br>
+          <label><input type="radio" name="q2" value="b"> ADD TO usuarios (nombre, email) ('Juan', 'juan@example.com');</label><br>
+          <label><input type="radio" name="q2" value="c"> INSERT INTO usuarios ('Juan', 'juan@example.com');</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(4)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion4"></div>
+    </section>
+    <section id="seccion5" style="display:none;">
+      <h2>Sección 5: Seguridad en PHP y MySQL</h2>
+      <p>Es fundamental proteger tu aplicación de web contra ataques como la inyección SQL.</p>
+      <h3>Ejemplo de Prevención de Inyección SQL:</h3>
+      <pre><code>&lt;?php
+$stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = ?");
+$stmt->bind_param("s", $email);
+$email = "juan@example.com";
+$stmt->execute();
+$result = $stmt->get_result();
+while ($row = $result->fetch_assoc()) {
+    echo $row['nombre'];
+}
+$stmt->close();
+$conn->close();
+?&gt;</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion5">
+        <div class="question">
+          <p>1. ¿Qué es la inyección SQL?</p>
+          <label><input type="radio" name="q1" value="a"> Un método para insertar código malicioso en una consulta SQL</label><br>
+          <label><input type="radio" name="q1" value="b"> Una técnica para mejorar el rendimiento de las consultas</label><br>
+          <label><input type="radio" name="q1" value="c"> Un tipo de ataque DDoS</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cómo se previene la inyección SQL en PHP?</p>
+          <label><input type="radio" name="q2" value="a"> Usando declaraciones preparadas</label><br>
+          <label><input type="radio" name="q2" value="b"> Validando datos del usuario</label><br>
+          <label><input type="radio" name="q2" value="c"> Ambas respuestas anteriores son correctas</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(5)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion5"></div>
+    </section>
+    <section id="final" style="display:none;">
+      <h2>¡Felicitaciones!</h2>
+      <p>Has completado todas las secciones del curso de Fundamentos de PHP y MySQL.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

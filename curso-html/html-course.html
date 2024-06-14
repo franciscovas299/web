@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de HTML</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Curso de HTML</h1>
+  </header>
+  <main>
+    <section id="seccion1">
+      <h2>Sección 1: Introducción a HTML</h2>
+      <p>HTML (HyperText Markup Language) es el estándar para crear páginas web. Aquí aprenderás los conceptos básicos.</p>
+      <h3>Ejemplo de HTML:</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Página de ejemplo&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hola, Mundo!&lt;/h1&gt;
+    &lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion1">
+        <div class="question">
+          <p>1. ¿Qué significa HTML?</p>
+          <label><input type="radio" name="q1" value="a"> HyperText Markup Language</label><br>
+          <label><input type="radio" name="q1" value="b"> HighText Machine Language</label><br>
+          <label><input type="radio" name="q1" value="c"> Hyperloop Machine Language</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cuál es el elemento HTML correcto para el título más grande?</p>
+          <label><input type="radio" name="q2" value="a"> &lt;heading&gt;</label><br>
+          <label><input type="radio" name="q2" value="b"> &lt;h1&gt;</label><br>
+          <label><input type="radio" name="q2" value="c"> &lt;head&gt;</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(1)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion1"></div>
+    </section>
+    <section id="seccion2" style="display:none;">
+      <h2>Sección 2: Estructura básica de una página HTML</h2>
+      <p>Una página HTML está estructurada con elementos como el encabezado, el cuerpo y el pie de página.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion2">
+        <div class="question">
+          <p>1. ¿Qué elemento HTML contiene la información que se muestra en la pestaña del navegador?</p>
+          <label><input type="radio" name="q1" value="a"> &lt;meta&gt;</label><br>
+          <label><input type="radio" name="q1" value="b"> &lt;title&gt;</label><br>
+          <label><input type="radio" name="q1" value="c"> &lt;head&gt;</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cuál es el elemento correcto para definir una sección en el cuerpo de la página?</p>
+          <label><input type="radio" name="q2" value="a"> &lt;div&gt;</label><br>
+          <label><input type="radio" name="q2" value="b"> &lt;section&gt;</label><br>
+          <label><input type="radio" name="q2" value="c"> &lt;body&gt;</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(2)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion2"></div>
+    </section>
+    <section id="seccion3" style="display:none;">
+      <h2>Sección 3: Etiquetas comunes en HTML</h2>
+      <p>Aprende a usar etiquetas HTML comunes como &lt;a&gt;, &lt;img&gt;, &lt;table&gt;, y más.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion3">
+        <div class="question">
+          <p>1. ¿Qué etiqueta se usa para crear un enlace en HTML?</p>
+          <label><input type="radio" name="q1" value="a"> &lt;link&gt;</label><br>
+          <label><input type="radio" name="q1" value="b"> &lt;a&gt;</label><br>
+          <label><input type="radio" name="q1" value="c"> &lt;href&gt;</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué atributo se usa para especificar la URL de un enlace?</p>
+          <label><input type="radio" name="q2" value="a"> src</label><br>
+          <label><input type="radio" name="q2" value="b"> href</label><br>
+          <label><input type="radio" name="q2" value="c"> link</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(3)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion3"></div>
+    </section>
+    <section id="seccion4" style="display:none;">
+      <h2>Sección 4: Formularios en HTML</h2>
+      <p>Los formularios permiten a los usuarios enviar datos a un servidor.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion4">
+        <div class="question">
+          <p>1. ¿Qué etiqueta HTML se usa para definir un formulario?</p>
+          <label><input type="radio" name="q1" value="a"> &lt;form&gt;</label><br>
+          <label><input type="radio" name="q1" value="b"> &lt;input&gt;</label><br>
+          <label><input type="radio" name="q1" value="c"> &lt;button&gt;</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué atributo define el tipo de entrada en un formulario?</p>
+          <label><input type="radio" name="q2" value="a"> type</label><br>
+          <label><input type="radio" name="q2" value="b"> name</label><br>
+          <label><input type="radio" name="q2" value="c"> input</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(4)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion4"></div>
+    </section>
+    <section id="seccion5" style="display:none;">
+      <h2>Sección 5: Multimedia en HTML</h2>
+      <p>Incrusta videos, audios e imágenes en tus páginas web.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion5">
+        <div class="question">
+          <p>1. ¿Qué etiqueta se usa para incrustar un video en HTML?</p>
+          <label><input type="radio" name="q1" value="a"> &lt;video&gt;</label><br>
+          <label><input type="radio" name="q1" value="b"> &lt;media&gt;</label><br>
+          <label><input type="radio" name="q1" value="c"> &lt;embed&gt;</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué atributo se usa para definir la fuente del video?</p>
+          <label><input type="radio" name="q2" value="a"> src</label><br>
+          <label><input type="radio" name="q2" value="b"> href</label><br>
+          <label><input type="radio" name="q2" value="c"> source</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(5)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion5"></div>
+    </section>
+    <section id="final" style="display:none;">
+      <h2>¡Felicitaciones!</h2>
+      <p>Has completado todas las secciones del curso de HTML.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

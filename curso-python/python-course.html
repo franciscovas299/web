@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Python</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Curso de Python para Principiantes</h1>
+  </header>
+  <main>
+    <section id="seccion1">
+      <h2>Sección 1: Introducción a Python</h2>
+      <p>Python es un lenguaje de programación popular y fácil de aprender. Aquí aprenderás los conceptos básicos.</p>
+      <h3>Ejemplo de Python:</h3>
+      <pre><code>print("Hola, Mundo!")</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion1">
+        <div class="question">
+          <p>1. ¿Qué es Python?</p>
+          <label><input type="radio" name="q1" value="a"> Un lenguaje de programación</label><br>
+          <label><input type="radio" name="q1" value="b"> Un sistema operativo</label><br>
+          <label><input type="radio" name="q1" value="c"> Un navegador web</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cómo se imprime un mensaje en Python?</p>
+          <label><input type="radio" name="q2" value="a"> console.log("Hola, Mundo!")</label><br>
+          <label><input type="radio" name="q2" value="b"> print("Hola, Mundo!")</label><br>
+          <label><input type="radio" name="q2" value="c"> echo "Hola, Mundo!"</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(1)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion1"></div>
+    </section>
+    <section id="seccion2" style="display:none;">
+      <h2>Sección 2: Variables y Tipos de Datos</h2>
+      <p>En Python, puedes almacenar valores en variables y trabajar con diferentes tipos de datos.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion2">
+        <div class="question">
+          <p>1. ¿Cómo defines una variable en Python?</p>
+          <label><input type="radio" name="q1" value="a"> var x = 5</label><br>
+          <label><input type="radio" name="q1" value="b"> x = 5</label><br>
+          <label><input type="radio" name="q1" value="c"> int x = 5</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cuál es el tipo de dato de "Hola, Mundo!"?</p>
+          <label><input type="radio" name="q2" value="a"> Entero</label><br>
+          <label><input type="radio" name="q2" value="b"> Cadena</label><br>
+          <label><input type="radio" name="q2" value="c"> Flotante</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(2)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion2"></div>
+    </section>
+    <section id="seccion3" style="display:none;">
+      <h2>Sección 3: Estructuras de Control</h2>
+      <p>Aprende a usar estructuras de control como if, for y while en Python.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion3">
+        <div class="question">
+          <p>1. ¿Cuál es la sintaxis correcta para una declaración if en Python?</p>
+          <label><input type="radio" name="q1" value="a"> if (x > 0) {}</label><br>
+          <label><input type="radio" name="q1" value="b"> if x > 0:</label><br>
+          <label><input type="radio" name="q1" value="c"> if x > 0 then</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cuál es la sintaxis correcta para un bucle for en Python?</p>
+          <label><input type="radio" name="q2" value="a"> for i in range(10):</label><br>
+          <label><input type="radio" name="q2" value="b"> for (i = 0; i < 10; i++)</label><br>
+          <label><input type="radio" name="q2" value="c"> foreach i in range(10)</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(3)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion3"></div>
+    </section>
+    <section id="seccion4" style="display:none;">
+      <h2>Sección 4: Funciones en Python</h2>
+      <p>Las funciones te permiten reutilizar código y organizar tu programa en bloques manejables.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion4">
+        <div class="question">
+          <p>1. ¿Cómo defines una función en Python?</p>
+          <label><input type="radio" name="q1" value="a"> function mi_funcion():</label><br>
+          <label><input type="radio" name="q1" value="b"> def mi_funcion():</label><br>
+          <label><input type="radio" name="q1" value="c"> func mi_funcion():</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cómo llamas a una función en Python?</p>
+          <label><input type="radio" name="q2" value="a"> llamar(mi_funcion)</label><br>
+          <label><input type="radio" name="q2" value="b"> mi_funcion()</label><br>
+          <label><input type="radio" name="q2" value="c"> ejecutar(mi_funcion)</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(4)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion4"></div>
+    </section>
+    <section id="seccion5" style="display:none;">
+      <h2>Sección 5: Manejo de Archivos</h2>
+      <p>Aprende a leer y escribir archivos en Python para manejar datos de manera eficiente.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion5">
+        <div class="question">
+          <p>1. ¿Qué función se usa para abrir un archivo en Python?</p>
+          <label><input type="radio" name="q1" value="a"> open()</label><br>
+          <label><input type="radio" name="q1" value="b"> file_open()</label><br>
+          <label><input type="radio" name="q1" value="c"> open_file()</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué método se usa para leer todo el contenido de un archivo en una sola cadena?</p>
+          <label><input type="radio" name="q2" value="a"> read()</label><br>
+          <label><input type="radio" name="q2" value="b"> read_all()</label><br>
+          <label><input type="radio" name="q2" value="c"> readfile()</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(5)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion5"></div>
+    </section>
+    <section id="final" style="display:none;">
+      <h2>¡Felicitaciones!</h2>
+      <p>Has completado todas las secciones del curso de Python.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

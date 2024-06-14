@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de CSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Curso de CSS</h1>
+  </header>
+  <main>
+    <section id="seccion1">
+      <h2>Sección 1: Introducción a CSS</h2>
+      <p>CSS (Cascading Style Sheets) es el lenguaje que usamos para estilizar una página HTML.</p>
+      <h3>Ejemplo de CSS:</h3>
+      <pre><code>body {
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: blue;
+}
+p {
+  font-size: 14px;
+}</code></pre>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion1">
+        <div class="question">
+          <p>1. ¿Qué significa CSS?</p>
+          <label><input type="radio" name="q1" value="a"> Cascading Style Sheets</label><br>
+          <label><input type="radio" name="q1" value="b"> Computer Style Sheets</label><br>
+          <label><input type="radio" name="q1" value="c"> Creative Style Sheets</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Dónde se debe incluir la referencia a una hoja de estilos externa en HTML?</p>
+          <label><input type="radio" name="q2" value="a"> En la sección &lt;body&gt;</label><br>
+          <label><input type="radio" name="q2" value="b"> En la sección &lt;head&gt;</label><br>
+          <label><input type="radio" name="q2" value="c"> Al final del documento</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(1)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion1"></div>
+    </section>
+    <section id="seccion2" style="display:none;">
+      <h2>Sección 2: Selectores y Propiedades de CSS</h2>
+      <p>CSS usa selectores para aplicar estilos a elementos HTML específicos.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion2">
+        <div class="question">
+          <p>1. ¿Qué selector se usa para aplicar estilos a un elemento con una clase específica?</p>
+          <label><input type="radio" name="q1" value="a"> #nombreClase</label><br>
+          <label><input type="radio" name="q1" value="b"> .nombreClase</label><br>
+          <label><input type="radio" name="q1" value="c"> nombreClase</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Cuál es la propiedad correcta para cambiar el color del texto en CSS?</p>
+          <label><input type="radio" name="q2" value="a"> text-color</label><br>
+          <label><input type="radio" name="q2" value="b"> font-color</label><br>
+          <label><input type="radio" name="q2" value="c"> color</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(2)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion2"></div>
+    </section>
+    <section id="seccion3" style="display:none;">
+      <h2>Sección 3: Modelo de Caja de CSS</h2>
+      <p>El modelo de caja de CSS describe cómo se colocan y dimensionan los elementos HTML.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion3">
+        <div class="question">
+          <p>1. ¿Qué propiedad se usa para agregar espacio dentro de un elemento?</p>
+          <label><input type="radio" name="q1" value="a"> margin</label><br>
+          <label><input type="radio" name="q1" value="b"> padding</label><br>
+          <label><input type="radio" name="q1" value="c"> border</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué propiedad define el espacio fuera de los bordes de un elemento?</p>
+          <label><input type="radio" name="q2" value="a"> margin</label><br>
+          <label><input type="radio" name="q2" value="b"> padding</label><br>
+          <label><input type="radio" name="q2" value="c"> border</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(3)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion3"></div>
+    </section>
+    <section id="seccion4" style="display:none;">
+      <h2>Sección 4: Flexbox en CSS</h2>
+      <p>Flexbox es un modelo de diseño que facilita la alineación y distribución de elementos dentro de un contenedor.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion4">
+        <div class="question">
+          <p>1. ¿Qué propiedad define un contenedor flex en CSS?</p>
+          <label><input type="radio" name="q1" value="a"> flex</label><br>
+          <label><input type="radio" name="q1" value="b"> display: flex</label><br>
+          <label><input type="radio" name="q1" value="c"> flex-container</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué propiedad alinea elementos flexibles en la dirección principal?</p>
+          <label><input type="radio" name="q2" value="a"> justify-content</label><br>
+          <label><input type="radio" name="q2" value="b"> align-items</label><br>
+          <label><input type="radio" name="q2" value="c"> align-content</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(4)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion4"></div>
+    </section>
+    <section id="seccion5" style="display:none;">
+      <h2>Sección 5: Grid Layout en CSS</h2>
+      <p>CSS Grid Layout es un sistema de diseño bidimensional para crear diseños complejos en la web.</p>
+      <h2>Preguntas</h2>
+      <form id="quiz-seccion5">
+        <div class="question">
+          <p>1. ¿Qué propiedad define un contenedor de cuadrícula en CSS?</p>
+          <label><input type="radio" name="q1" value="a"> grid-template</label><br>
+          <label><input type="radio" name="q1" value="b"> display: grid</label><br>
+          <label><input type="radio" name="q1" value="c"> grid-layout</label><br>
+        </div>
+        <div class="question">
+          <p>2. ¿Qué propiedad se usa para definir el número de columnas en una cuadrícula?</p>
+          <label><input type="radio" name="q2" value="a"> grid-template-rows</label><br>
+          <label><input type="radio" name="q2" value="b"> grid-template-columns</label><br>
+          <label><input type="radio" name="q2" value="c"> grid-columns</label><br>
+        </div>
+        <button type="button" onclick="submitQuiz(5)">Enviar</button>
+      </form>
+      <div id="quiz-result-seccion5"></div>
+    </section>
+    <section id="final" style="display:none;">
+      <h2>¡Felicitaciones!</h2>
+      <p>Has completado todas las secciones del curso de CSS.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
